@@ -1,0 +1,11 @@
+<div class="full-bar">
+  <div class="progress-bar" [style.width.%]="progress">{{ progress }}%</div>
+</div>
+<div class="btn">
+  <button class="start-btn" (click)="startLoading()" *ngIf="!isLoading">
+    Start
+  </button>
+  <button class="pause-btn" (click)="pauseLoading()" *ngIf="isLoading">
+    Pause
+  </button>
+</div>

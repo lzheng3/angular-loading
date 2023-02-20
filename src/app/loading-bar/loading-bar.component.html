@@ -1,0 +1,16 @@
+<div class="progress">
+  <div class="progress-bar"></div>
+  <h1>{{ progress }}</h1>
+</div>
+<div class="start">
+  <button
+    class="start-btn"
+    *ngIf="isStarted; else button2"
+    (click)="handleButtonClick()"
+  >
+    Start Loading
+  </button>
+  <ng-template #button2>
+    <button class="pause-btn" (click)="handlePause()">Pause</button>
+  </ng-template>
+</div>
